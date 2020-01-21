@@ -13,7 +13,7 @@ int main()
   string status;
   cout << "Enter age: ";
   cin >> age;
-  if(age<20){
+  if(age<=20){
       cout << "Enter height: ";
       cin >> height;
       if(height<160)
@@ -28,12 +28,18 @@ int main()
           }else{
             status = "ONE-NIGHT-STAND";
             }
-        } 
-      cout << "status = " << status;
+        }
 
-  }
-  
-
-
+        }else if(age<30){
+            cout << "Enter asset: ";
+            cin >> asset;
+            if(asset>10000000){
+            status = "BEST FRIEND";
+          }else{
+            status = "UNFRIEND";
+            }
+        }else status = "UNFRIEND";
+    
+  cout << "status = " << status; 
   return 0;
 }
